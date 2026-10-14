@@ -1,0 +1,13 @@
+site_name: Стайлгайд технической документации MenshikovAI
+site_description: Правила оформления технической документации проекта MenshikovAI
+theme:
+  name: readthedocs
+  locale: ru
+nav:
+  - Главная: index.md
+  - О проекте: about-project.md
+  - Установка и запуск: installation.md
+  - Конфигурация: configuration.md
+  - Архитектура и компоненты: architecture.md
+  - Данные: data.md
+  - Тестирование: testing.md
