@@ -11,3 +11,4 @@ nav:
   - Архитектура и компоненты: architecture.md
   - Данные: data.md
   - Тестирование: testing.md
+  - Доступность текста: accessibility.md
