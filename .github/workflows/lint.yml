@@ -1,0 +1,32 @@
+name: Lint Markdown
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'style-guide-project/docs/**'
+      - 'style-guide-project/*.md'
+      - 'style-guide-project/.markdownlint*'
+      - '.markdownlint*'
+      - '.github/workflows/lint.yml'
+  pull_request:
+    paths:
+      - 'style-guide-project/docs/**'
+      - 'style-guide-project/*.md'
+      - 'style-guide-project/.markdownlint*'
+      - '.markdownlint*'
+      - '.github/workflows/lint.yml'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run markdownlint-cli2
+        uses: DavidAnson/markdownlint-cli2-action@v20
+        with:
+          globs: |
+            style-guide-project/docs/**/*.md
+            style-guide-project/*.md
+          config: style-guide-project/.markdownlint.json
